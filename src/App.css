@@ -74,9 +74,7 @@ a:visited {
 }
 
 .searchForm {
-  border-radius: 0.5rem;
-  height: 5rem;
-  width: 20rem;
+  padding-bottom: 1rem;
 }
 
 .body {
