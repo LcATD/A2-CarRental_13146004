@@ -1,7 +1,16 @@
 import { Card, Button } from "react-bootstrap";
+import { useShoppingCart } from "../contexts/shoppingCartContext";
 
 export function StoreItem({ name, price, inStock, link }) {
-  const qty = 1;
+  const {
+    getItemQuantity,
+    increaseItemQuantity,
+    decreaseItemQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+
+  const qty = getItemQuantity(name);
+
   return (
     <div className="cards">
       <Card className="mb-5 h-100">
@@ -29,8 +38,11 @@ export function StoreItem({ name, price, inStock, link }) {
                 style={{
                   backgroundColor: "#61dafb",
                 }}
+                onClick={() => increaseItemQuantity(name)}
+                //disable if out of stock
+                disabled={!inStock}
               >
-                + Add to Cart
+                {inStock === true ? "+ Add to Cart" : "Out of Stock"}
               </Button>
             ) : (
               <div
@@ -41,13 +53,26 @@ export function StoreItem({ name, price, inStock, link }) {
                   className="d-flex align-items-center justify-content-center"
                   style={{ gap: "0.5rem" }}
                 >
-                  <Button>-</Button>
+                  <Button onClick={() => decreaseItemQuantity(name)}>-</Button>
                   <div>
                     <span className="fs-4">{qty}</span> &nbsp;in cart
                   </div>
-                  <Button>+</Button>
+                  <Button
+                    onClick={() => increaseItemQuantity(name)}
+                    //Cannot purchase a single item more than 20 times
+                    //Sum of a single item cannot exceed 100 dollars
+                    disabled={
+                      qty >= 20 || (qty + 1) * price >= 100 ? true : false
+                    }
+                  >
+                    +
+                  </Button>
                 </div>
-                <Button variant="danger" size="sm">
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => removeFromCart(name)}
+                >
                   Remove from cart
                 </Button>
               </div>

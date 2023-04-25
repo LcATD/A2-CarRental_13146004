@@ -7,23 +7,26 @@ import { Dairy } from "./pages/dairy";
 import { Frozen } from "./pages/frozen";
 import { Checkout } from "./pages/checkout";
 import { Navbar } from "./components/navbar";
+import { ShoppingCartProvider } from "./contexts/shoppingCartContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="header">
-        {/* Nav Bar */}
-        <Navbar />
-      </header>
-      <Routes>
-        <Route path="/grocery" element={<Grocery />} />
-        <Route path="/fresh" element={<Fresh />} />
-        <Route path="/meat" element={<Meat />} />
-        <Route path="/dairy" element={<Dairy />} />
-        <Route path="/frozen" element={<Frozen />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
-    </div>
+    <ShoppingCartProvider>
+      <div className="App">
+        <header className="header">
+          {/* Nav Bar */}
+          <Navbar />
+        </header>
+        <Routes>
+          <Route path="/grocery" element={<Grocery />} />
+          <Route path="/fresh" element={<Fresh />} />
+          <Route path="/meat" element={<Meat />} />
+          <Route path="/dairy" element={<Dairy />} />
+          <Route path="/frozen" element={<Frozen />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </div>
+    </ShoppingCartProvider>
   );
 }
 
