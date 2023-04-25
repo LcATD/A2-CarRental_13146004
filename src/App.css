@@ -17,7 +17,7 @@
 }
 
 .header .logo img {
-  margin-right: 0.5rem;
+  padding-top: 0.3rem;
 }
 
 a {
@@ -34,6 +34,11 @@ a:visited {
   overflow: hidden;
   user-select: none;
   padding-right: 1.5rem;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+  position: fixed;
 }
 
 .dropdown-items {
@@ -54,10 +59,6 @@ a:visited {
   text-align: left;
 }
 
-.dropdown:hover .dropdown-items {
-  display: block;
-}
-
 .dropdown-items a:hover {
   color: white;
   background-color: #4ca4bc;
@@ -70,13 +71,18 @@ a:visited {
 .header .navbar {
   display: inline-block;
   font-size: 1.5rem;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .searchForm {
-  padding-bottom: 1rem;
+  font-size: medium;
 }
 
 .body {
   padding-top: 6rem;
+  padding-left: 3rem;
+}
+
+.cards {
+  padding-left: 1.5rem;
 }

@@ -96,6 +96,30 @@
     "link": "/images/lemonsparklingwater.jpg"
   },
   {
+    "name": "Red Bull Energy Drink",
+    "price": 3.3,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/redbull.jpg"
+  },
+  {
+    "name": "Coffee",
+    "price": 3.6,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/coffee.jpg"
+  },
+  {
+    "name": "Bubble Tea",
+    "price": 4.8,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/bubbletea.jpg"
+  },
+  {
     "name": "Potato Chip",
     "price": 4.0,
     "category": "Grocery",
@@ -110,6 +134,14 @@
     "sub-category": "Condiment",
     "inStock": true,
     "link": "/images/soysauce.jpg"
+  },
+  {
+    "name": "Olive Oil",
+    "price": 16.9,
+    "category": "Grocery",
+    "sub-category": "Condiment",
+    "inStock": false,
+    "link": "/images/oliveoil.jpg"
   },
   {
     "name": "Laundry Liquid",
