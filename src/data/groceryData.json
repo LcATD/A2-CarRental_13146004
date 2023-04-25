@@ -208,10 +208,10 @@
     "link": "/images/milk.jpg"
   },
   {
-    "name": "Lemon Yoghurt",
+    "name": "Lemon Yogurt",
     "price": 3.8,
     "category": "Dairy",
-    "subCategory": "Yoghurt",
+    "subCategory": "Yogurt",
     "inStock": true,
     "link": "/images/lemonyoghurt.jpg"
   },
@@ -224,12 +224,12 @@
     "link": "/images/soymilk.jpg"
   },
   {
-    "name": "Soymilk",
-    "price": 4.9,
+    "name": "Rice milk",
+    "price": 4.5,
     "category": "Dairy",
     "subCategory": "Non-dairy milk",
     "inStock": true,
-    "link": "/images/soymilk.jpg"
+    "link": "/images/ricemilk.jpg"
   },
   {
     "name": "Frozen Cauliflower",
