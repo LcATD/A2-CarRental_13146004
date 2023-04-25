@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Water",
+    "price": 0.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/water.jpg"
+  },
+  {
+    "name": "Cola",
+    "price": 3.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/cola.jpg"
+  },
+  {
+    "name": "Tea",
+    "price": 2.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/tea.jpg"
+  },
+  {
+    "name": "Sparkling Water",
+    "price": 1.2,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/sparklingwater.jpg"
+  },
+  {
+    "name": "Mango Soda",
+    "price": 5.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/mangosoda.jpg"
+  },
+  {
+    "name": "Sprite",
+    "price": 2.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/sprite.jpg"
+  },
+  {
+    "name": "Coconut Water",
+    "price": 4.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/coconutwater.jpg"
+  },
+  {
+    "name": "Maple Water",
+    "price": 44.44,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/maplewater.jpg"
+  },
+  {
+    "name": "Almond Water",
+    "price": 69.69,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/almondwater.jpg"
+  },
+  {
+    "name": "Distilled Water",
+    "price": 5.9,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/distilledwater.jpg"
+  },
+  {
+    "name": "Banana Water",
+    "price": 8.8,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/bananawater.jpg"
+  },
+  {
+    "name": "Lemon Sparkling Water",
+    "price": 1.7,
+    "category": "Grocery",
+    "sub-category": "Beverage",
+    "inStock": true,
+    "link": "/images/lemonsparklingwater.jpg"
+  },
+  {
+    "name": "Potato Chip",
+    "price": 4.0,
+    "category": "Grocery",
+    "sub-category": "Snack",
+    "inStock": true,
+    "link": "/images/potatochip.jpg"
+  },
+  {
+    "name": "Soy Sauce",
+    "price": 5.8,
+    "category": "Grocery",
+    "sub-category": "Condiment",
+    "inStock": true,
+    "link": "/images/soysauce.jpg"
+  },
+  {
+    "name": "Laundry Liquid",
+    "price": 12.8,
+    "category": "Grocery",
+    "sub-category": "Laundry",
+    "inStock": true,
+    "link": "/images/laundryliquid.jpg"
+  },
+  {
+    "name": "Spinach",
+    "price": 4.4,
+    "category": "Fresh",
+    "sub-category": "Vegetable",
+    "inStock": true,
+    "link": "/images/spinach.jpg"
+  },
+  {
+    "name": "Banana",
+    "price": 9.9,
+    "category": "Fresh",
+    "sub-category": "Fruit",
+    "inStock": true,
+    "link": "/images/banana.jpg"
+  },
+  {
+    "name": "Whole Chicken",
+    "price": 10.8,
+    "category": "Meat",
+    "sub-category": "Poultry",
+    "inStock": true,
+    "link": "/images/wholechicken.jpg"
+  },
+  {
+    "name": "Chicken Thigh",
+    "price": 14.4,
+    "category": "Meat",
+    "sub-category": "Poultry",
+    "inStock": true,
+    "link": "/images/chickenthigh.jpg"
+  },
+  {
+    "name": "Beef Scotch Fillet",
+    "price": 18.9,
+    "category": "Meat",
+    "sub-category": "Beef",
+    "inStock": false,
+    "link": "/images/beefscotch.jpg"
+  },
+  {
+    "name": "Pork Belly",
+    "price": 11.9,
+    "category": "Meat",
+    "sub-category": "Pork",
+    "inStock": true,
+    "link": "/images/porkbelly.jpg"
+  },
+  {
+    "name": "Full Cream Milk",
+    "price": 2.7,
+    "category": "Dairy",
+    "sub-category": "Milk",
+    "inStock": true,
+    "link": "/images/milk.jpg"
+  },
+  {
+    "name": "Lemon Yoghurt",
+    "price": 3.8,
+    "category": "Dairy",
+    "sub-category": "Yoghurt",
+    "inStock": true,
+    "link": "/images/lemonyoghurt.jpg"
+  },
+  {
+    "name": "Soymilk",
+    "price": 4.9,
+    "category": "Dairy",
+    "sub-category": "Non-dairy milk",
+    "inStock": true,
+    "link": "/images/soymilk.jpg"
+  },
+  {
+    "name": "Soymilk",
+    "price": 4.9,
+    "category": "Dairy",
+    "sub-category": "Non-dairy milk",
+    "inStock": true,
+    "link": "/images/soymilk.jpg"
+  },
+  {
+    "name": "Frozen Cauliflower",
+    "price": 7.9,
+    "category": "Frozen",
+    "sub-category": "Frozen vegetable",
+    "inStock": true,
+    "link": "/images/frozencauliflower.jpg"
+  },
+  {
+    "name": "Frozen Beef Pie",
+    "price": 6.9,
+    "category": "Frozen",
+    "sub-category": "Frozen food",
+    "inStock": true,
+    "link": "/images/frozenbeefpie.jpg"
+  },
+  {
+    "name": "Chocolate Ice Cream",
+    "price": 6.9,
+    "category": "Frozen",
+    "sub-category": "Dessert",
+    "inStock": true,
+    "link": "/images/chocolateicecream.jpg"
+  }
+]
