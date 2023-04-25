@@ -1,5 +1,11 @@
 import logo from "./logo.png";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Grocery } from "./pages/grocery";
+import { Fresh } from "./pages/fresh";
+import { Meat } from "./pages/meat";
+import { Dairy } from "./pages/dairy";
+import { Frozen } from "./pages/frozen";
 
 function App() {
   return (
@@ -13,43 +19,43 @@ function App() {
           <div class="dropdown">
             <div class="dropdown-button">Grocery</div>
             <div class="dropdown-items">
-              <a href="#beverage">Beverage</a>
-              <a href="#snack">Snack</a>
-              <a href="#condiment">Condiment</a>
-              <a href="#pet">Pet</a>
-              <a href="#laundry">Laundry</a>
+              <a href="/grocery#beverage">Beverage</a>
+              <a href="/grocery#snack">Snack</a>
+              <a href="/grocery#condiment">Condiment</a>
+              <a href="/grocery#pet">Pet</a>
+              <a href="/grocery#laundry">Laundry</a>
             </div>
           </div>
           <div class="dropdown">
             <div class="dropdown-button">Fresh</div>
             <div class="dropdown-items">
-              <a href="#vegetable">Vegetable</a>
-              <a href="#fruit">Fruit</a>
+              <a href="/fresh#vegetable">Vegetable</a>
+              <a href="/fresh#fruit">Fruit</a>
             </div>
           </div>
           <div class="dropdown">
             <div class="dropdown-button">Meat</div>
             <div class="dropdown-items">
-              <a href="#poultry">Poultry</a>
-              <a href="#beef">Beef</a>
-              <a href="#pork">Pork</a>
-              <a href="#vegan">Vegan</a>
+              <a href="/meat#poultry">Poultry</a>
+              <a href="/meat#beef">Beef</a>
+              <a href="/meat#pork">Pork</a>
+              <a href="/meat#vegan">Vegan</a>
             </div>
           </div>
           <div class="dropdown">
             <div class="dropdown-button">Dairy</div>
             <div class="dropdown-items">
-              <a href="#milk">Milk</a>
-              <a href="#yogurt">Yogurt</a>
-              <a href="#non-dairy">Non-dairy milk</a>
+              <a href="/dairy#milk">Milk</a>
+              <a href="/dairy#yogurt">Yogurt</a>
+              <a href="/dairy#non-dairy">Non-dairy milk</a>
             </div>
           </div>
           <div class="dropdown">
             <div class="dropdown-button">Frozen</div>
             <div class="dropdown-items">
-              <a href="#frozen-veg">Frozen Vegetable</a>
-              <a href="#frozen-food">Frozen Food</a>
-              <a href="#dessert">Dessert</a>
+              <a href="/frozen#frozen-veg">Frozen Vegetable</a>
+              <a href="/frozen#frozen-food">Frozen Food</a>
+              <a href="/frozen#dessert">Dessert</a>
             </div>
           </div>
         </nav>
@@ -62,6 +68,13 @@ function App() {
           />
         </form>
       </header>
+      <Routes>
+        <Route path="/grocery" element={<Grocery />} />
+        <Route path="/fresh" element={<Fresh />} />
+        <Route path="/meat" element={<Meat />} />
+        <Route path="/dairy" element={<Dairy />} />
+        <Route path="/frozen" element={<Frozen />} />
+      </Routes>
     </div>
   );
 }
