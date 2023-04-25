@@ -8,11 +8,11 @@
     "link": "/images/water.jpg"
   },
   {
-    "name": "Water",
-    "price": 0.9,
-    "category": "Grocery",
-    "sub-category": "Beverage",
+    "name": "Banana",
+    "price": 9.9,
+    "category": "Fresh",
+    "sub-category": "Fruit",
     "inStock": true,
-    "link": "/images/water.jpg"
+    "link": "/images/banana.jpg"
   }
 ]
