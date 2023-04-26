@@ -5,9 +5,9 @@ import { Col, Row } from "react-bootstrap";
 export function Frozen() {
   return (
     <>
-      <h1 class="body">Frozen</h1>
+      <h1 className="body">Frozen</h1>
       <h3
-        class="body"
+        className="body"
         id="frozen-veg"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -23,7 +23,7 @@ export function Frozen() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="frozen-food"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -39,7 +39,7 @@ export function Frozen() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="dessert"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >

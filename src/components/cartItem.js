@@ -37,6 +37,11 @@ export function CartItem({ name, qty }) {
             variant="danger"
             size="sm"
             onClick={() => removeFromCart(item.name)}
+            style={{
+              //disable editing on checkout page
+              visibility:
+                window.location.pathname === "/checkout" ? "hidden" : "visible",
+            }}
           >
             ×
           </Button>

@@ -5,9 +5,9 @@ import { Col, Row } from "react-bootstrap";
 export function Fresh() {
   return (
     <>
-      <h1 class="body">Fresh</h1>
+      <h1 className="body">Fresh</h1>
       <h3
-        class="body"
+        className="body"
         id="vegetable"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -23,7 +23,7 @@ export function Fresh() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="fruit"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >

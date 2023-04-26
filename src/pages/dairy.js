@@ -5,9 +5,9 @@ import { Col, Row } from "react-bootstrap";
 export function Dairy() {
   return (
     <>
-      <h1 class="body">Dairy</h1>
+      <h1 className="body">Dairy</h1>
       <h3
-        class="body"
+        className="body"
         id="milk"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -23,7 +23,7 @@ export function Dairy() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="yogurt"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -39,7 +39,7 @@ export function Dairy() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="non-dairy"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >

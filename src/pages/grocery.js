@@ -5,9 +5,9 @@ import { Col, Row } from "react-bootstrap";
 export function Grocery() {
   return (
     <>
-      <h1 class="body">Grocery</h1>
+      <h1 className="body">Grocery</h1>
       <h3
-        class="body"
+        className="body"
         id="beverage"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -23,7 +23,7 @@ export function Grocery() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="snack"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -39,7 +39,7 @@ export function Grocery() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="condiment"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -55,7 +55,7 @@ export function Grocery() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="pet"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
@@ -71,7 +71,7 @@ export function Grocery() {
           ))}
       </Row>
       <h3
-        class="body"
+        className="body"
         id="laundry"
         style={{ marginTop: "-3rem", marginBottom: "2rem" }}
       >
