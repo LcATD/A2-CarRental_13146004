@@ -6,7 +6,11 @@ export function Frozen() {
   return (
     <>
       <h1 class="body">Frozen</h1>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="frozen-veg"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Frozen Vegetable
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -18,7 +22,11 @@ export function Frozen() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="frozen-food"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Frozen Food
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -30,7 +38,11 @@ export function Frozen() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="dessert"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Dessert
       </h3>
       <Row md={2} xs={1} lg={3}>

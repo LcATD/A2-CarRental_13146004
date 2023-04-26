@@ -6,7 +6,11 @@ export function Grocery() {
   return (
     <>
       <h1 class="body">Grocery</h1>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="beverage"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Beverage
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -18,7 +22,11 @@ export function Grocery() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="snack"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Snack
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -30,7 +38,11 @@ export function Grocery() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="condiment"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Condiment
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -42,7 +54,11 @@ export function Grocery() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="pet"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Pet
       </h3>
       <Row md={2} xs={1} lg={3}>
@@ -54,7 +70,11 @@ export function Grocery() {
             </Col>
           ))}
       </Row>
-      <h3 class="body" style={{ marginTop: "-3rem", marginBottom: "2rem" }}>
+      <h3
+        class="body"
+        id="laundry"
+        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
+      >
         Laundry
       </h3>
       <Row md={2} xs={1} lg={3}>
