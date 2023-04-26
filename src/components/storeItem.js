@@ -3,6 +3,7 @@ import { useShoppingCart } from "../contexts/shoppingCartContext";
 
 export function StoreItem({ name, price, inStock, link }) {
   const {
+    cartQty,
     getItemQuantity,
     increaseItemQuantity,
     decreaseItemQuantity,
@@ -27,7 +28,7 @@ export function StoreItem({ name, price, inStock, link }) {
               className="ms-2 text-muted"
               style={{ fontSize: "1.5rem", paddingTop: "0.5rem" }}
             >
-              {price}
+              ${price.toFixed(2)}
             </span>
           </Card.Title>
           <div className="mt-auto">
@@ -39,8 +40,8 @@ export function StoreItem({ name, price, inStock, link }) {
                   backgroundColor: "#61dafb",
                 }}
                 onClick={() => increaseItemQuantity(name)}
-                //disable if out of stock
-                disabled={!inStock}
+                //disable if out of stock or reached cart capacity
+                disabled={!inStock || cartQty >= 100}
               >
                 {inStock === true ? "+ Add to Cart" : "Out of Stock"}
               </Button>
@@ -61,8 +62,11 @@ export function StoreItem({ name, price, inStock, link }) {
                     onClick={() => increaseItemQuantity(name)}
                     //Cannot purchase a single item more than 20 times
                     //Sum of a single item cannot exceed 100 dollars
+                    //Cart cannot contain more than 100 items
                     disabled={
-                      qty >= 20 || (qty + 1) * price >= 100 ? true : false
+                      qty >= 20 || (qty + 1) * price >= 100 || cartQty >= 100
+                        ? true
+                        : false
                     }
                   >
                     +
