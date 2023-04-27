@@ -17,7 +17,7 @@ export function Frozen() {
         {items
           .filter((item) => item.subCategory === "Frozen vegetable")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}

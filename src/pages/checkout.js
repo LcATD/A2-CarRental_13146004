@@ -36,8 +36,11 @@ export function Checkout() {
     event.preventDefault();
     const errors = validateFormData(formData);
     if (Object.keys(errors).length === 0) {
-      console.log(formData); // send email logic comes here
+      //insert send email logic
+      console.log(formData);
+      //send success message
       alert("Your order is placed!");
+      //reset the form
       setFormData({
         name: "",
         address: "",

@@ -1,9 +1,22 @@
 import { Button } from "react-bootstrap";
 import logo from "../logo.png";
 import { useShoppingCart } from "../contexts/shoppingCartContext";
+import storeItems from "../data/groceryData.json";
 
 export function Navbar() {
   const { openCart, cartQty } = useShoppingCart();
+
+  const subcategoryCounts = storeItems.reduce((acc, item) => {
+    const { subCategory } = item;
+    if (subCategory in acc) {
+      acc[subCategory]++;
+    } else {
+      acc[subCategory] = 1;
+    }
+    return acc;
+  }, {});
+
+  //[Debug] console.log(subcategoryCounts);
 
   return (
     <>
@@ -14,43 +27,149 @@ export function Navbar() {
         <div className="dropdown">
           <div className="dropdown-button">Grocery</div>
           <div className="dropdown-items">
-            <a href="/grocery#beverage">Beverage</a>
-            <a href="/grocery#snack">Snack</a>
-            <a href="/grocery#condiment">Condiment</a>
-            <a href="/grocery#pet">Pet</a>
-            <a href="/grocery#laundry">Laundry</a>
+            <a
+              className={
+                subcategoryCounts.Beverage === undefined ? "disabled" : ""
+              }
+              href="/grocery#beverage"
+            >
+              Beverage &#40;{subcategoryCounts.Beverage || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Snack === undefined ? "disabled" : ""
+              }
+              href="/grocery#snack"
+            >
+              Snack &#40;{subcategoryCounts.Snack || 0}&#41;
+            </a>
+            <a href="/grocery#condiment">
+              Condiment &#40;{subcategoryCounts.Condiment || 0}&#41;
+            </a>
+            <a
+              className={subcategoryCounts.Pet === undefined ? "disabled" : ""}
+              href={"/grocery#pet"}
+            >
+              Pet &#40;{subcategoryCounts.Pet || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Laundry === undefined ? "disabled" : ""
+              }
+              href="/grocery#laundry"
+            >
+              Laundry &#40;{subcategoryCounts.Laundry || 0}&#41;
+            </a>
           </div>
         </div>
         <div className="dropdown">
           <div className="dropdown-button">Fresh</div>
           <div className="dropdown-items">
-            <a href="/fresh#vegetable">Vegetable</a>
-            <a href="/fresh#fruit">Fruit</a>
+            <a
+              className={
+                subcategoryCounts.Vegetable === undefined ? "disabled" : ""
+              }
+              href="/fresh#vegetable"
+            >
+              Vegetable &#40;{subcategoryCounts.Vegetable || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Fruit === undefined ? "disabled" : ""
+              }
+              href="/fresh#fruit"
+            >
+              Fruit &#40;{subcategoryCounts.Fruit || 0}&#41;
+            </a>
           </div>
         </div>
         <div className="dropdown">
           <div className="dropdown-button">Meat</div>
           <div className="dropdown-items">
-            <a href="/meat#poultry">Poultry</a>
-            <a href="/meat#beef">Beef</a>
-            <a href="/meat#pork">Pork</a>
-            <a href="/meat#vegan">Vegan</a>
+            <a
+              className={
+                subcategoryCounts.Poultry === undefined ? "disabled" : ""
+              }
+              href="/meat#poultry"
+            >
+              Poultry &#40;{subcategoryCounts.Poultry || 0}&#41;
+            </a>
+            <a
+              className={subcategoryCounts.Beef === undefined ? "disabled" : ""}
+              href="/meat#beef"
+            >
+              Beef &#40;{subcategoryCounts.Beef || 0}&#41;
+            </a>
+            <a
+              className={subcategoryCounts.Pork === undefined ? "disabled" : ""}
+              href="/meat#pork"
+            >
+              Pork &#40;{subcategoryCounts.Pork || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Vegan === undefined ? "disabled" : ""
+              }
+              href="/meat#vegan"
+            >
+              Vegan &#40;{subcategoryCounts.Vegan || 0}&#41;
+            </a>
           </div>
         </div>
         <div className="dropdown">
           <div className="dropdown-button">Dairy</div>
           <div className="dropdown-items">
-            <a href="/dairy#milk">Milk</a>
-            <a href="/dairy#yogurt">Yogurt</a>
-            <a href="/dairy#non-dairy">Non-dairy milk</a>
+            <a
+              className={subcategoryCounts.Milk === undefined ? "disabled" : ""}
+              href="/dairy#milk"
+            >
+              Milk &#40;{subcategoryCounts.Milk || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Yogurt === undefined ? "disabled" : ""
+              }
+              href="/dairy#yogurt"
+            >
+              Yogurt &#40;{subcategoryCounts.Yogurt || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.NonDairyMilk === undefined ? "disabled" : ""
+              }
+              href="/dairy#non-dairy"
+            >
+              Non-dairy milk &#40;{subcategoryCounts.NonDairyMilk || 0}&#41;
+            </a>
           </div>
         </div>
         <div className="dropdown">
           <div className="dropdown-button">Frozen</div>
           <div className="dropdown-items">
-            <a href="/frozen#frozen-veg">Frozen Vegetable</a>
-            <a href="/frozen#frozen-food">Frozen Food</a>
-            <a href="/frozen#dessert">Dessert</a>
+            <a
+              className={
+                subcategoryCounts.FrozenVeg === undefined ? "disabled" : ""
+              }
+              href="/frozen#frozen-veg"
+            >
+              Frozen Vegetable &#40;{subcategoryCounts.FrozenVeg || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.FrozenFood === undefined ? "disabled" : ""
+              }
+              href="/frozen#frozen-food"
+            >
+              Frozen Food &#40;{subcategoryCounts.FrozenFood || 0}&#41;
+            </a>
+            <a
+              className={
+                subcategoryCounts.Dessert === undefined ? "disabled" : ""
+              }
+              href="/frozen#dessert"
+            >
+              Dessert &#40;{subcategoryCounts.Dessert || 0}&#41;
+            </a>
           </div>
         </div>
       </nav>

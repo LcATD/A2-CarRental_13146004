@@ -36,14 +36,14 @@ a:visited {
   padding-right: 1.5rem;
 }
 
-.dropdown:hover .dropdown-items {
+.dropdown:hover .dropdown-items{
   display: block;
   position: fixed;
 }
 
 .dropdown-items {
   background: #a9dfee;
-  width: 8rem;
+  width: 10rem;
   font-size: 1rem;
   display: none;
   position: absolute;
@@ -57,6 +57,18 @@ a:visited {
   text-decoration: none;
   display: block;
   text-align: left;
+}
+
+.dropdown-items a.disabled {
+  color: lightgray;
+  background-color: darkgray;
+  pointer-events: none;
+  cursor: default;
+}
+
+.dropdown-items a.disabled:hover {
+  pointer-events: none;
+  cursor: default;
 }
 
 .dropdown-items a:hover {

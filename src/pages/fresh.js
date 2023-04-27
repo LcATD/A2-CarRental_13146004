@@ -17,7 +17,7 @@ export function Fresh() {
         {items
           .filter((item) => item.subCategory === "Vegetable")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -33,7 +33,7 @@ export function Fresh() {
         {items
           .filter((item) => item.subCategory === "Fruit")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}

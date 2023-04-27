@@ -17,7 +17,7 @@ export function Meat() {
         {items
           .filter((item) => item.subCategory === "Poultry")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -33,7 +33,7 @@ export function Meat() {
         {items
           .filter((item) => item.subCategory === "Beef")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -49,7 +49,7 @@ export function Meat() {
         {items
           .filter((item) => item.subCategory === "Pork")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -65,7 +65,7 @@ export function Meat() {
         {items
           .filter((item) => item.subCategory === "Vegan")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}

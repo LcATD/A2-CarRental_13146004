@@ -219,7 +219,7 @@
     "name": "Soymilk",
     "price": 4.9,
     "category": "Dairy",
-    "subCategory": "Non-dairy milk",
+    "subCategory": "NonDairyMilk",
     "inStock": true,
     "link": "/images/soymilk.jpg"
   },
@@ -227,7 +227,7 @@
     "name": "Rice milk",
     "price": 4.5,
     "category": "Dairy",
-    "subCategory": "Non-dairy milk",
+    "subCategory": "NonDairyMilk",
     "inStock": true,
     "link": "/images/ricemilk.jpg"
   },
@@ -235,7 +235,7 @@
     "name": "Frozen Cauliflower",
     "price": 7.9,
     "category": "Frozen",
-    "subCategory": "Frozen vegetable",
+    "subCategory": "FrozenVeg",
     "inStock": true,
     "link": "/images/frozencauliflower.jpg"
   },
@@ -243,7 +243,7 @@
     "name": "Frozen Beef Pie",
     "price": 6.9,
     "category": "Frozen",
-    "subCategory": "Frozen food",
+    "subCategory": "FrozenFood",
     "inStock": true,
     "link": "/images/frozenbeefpie.jpg"
   },

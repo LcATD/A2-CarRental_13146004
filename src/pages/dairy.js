@@ -17,7 +17,7 @@ export function Dairy() {
         {items
           .filter((item) => item.subCategory === "Milk")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -33,7 +33,7 @@ export function Dairy() {
         {items
           .filter((item) => item.subCategory === "Yogurt")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -49,7 +49,7 @@ export function Dairy() {
         {items
           .filter((item) => item.subCategory === "Non-dairy milk")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}

@@ -17,7 +17,7 @@ export function Grocery() {
         {items
           .filter((item) => item.subCategory === "Beverage")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -33,7 +33,7 @@ export function Grocery() {
         {items
           .filter((item) => item.subCategory === "Snack")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -49,7 +49,7 @@ export function Grocery() {
         {items
           .filter((item) => item.subCategory === "Condiment")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -65,7 +65,7 @@ export function Grocery() {
         {items
           .filter((item) => item.subCategory === "Pet")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -81,7 +81,7 @@ export function Grocery() {
         {items
           .filter((item) => item.subCategory === "Laundry")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
