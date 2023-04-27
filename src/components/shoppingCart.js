@@ -36,18 +36,15 @@ export function ShoppingCart({ isOpen }) {
         </div>
         <div
           className="d-flex justify-content-center position-absolute bottom-0 w-100 pb-3"
-          style={{ visibility: totalPrice === 0 ? "hidden" : "visible" }}
+          style={{
+            //Hide when cart is empty, or already on the checkout page
+            visibility:
+              totalPrice === 0 || window.location.pathname === "/checkout"
+                ? "hidden"
+                : "visible",
+          }}
         >
-          <Button
-            variant="outline-success"
-            size="md"
-            onClick={handleClick}
-            //hide when already on checkout page
-            style={{
-              visibility:
-                window.location.pathname === "/checkout" ? "hidden" : "visible",
-            }}
-          >
+          <Button variant="outline-success" size="md" onClick={handleClick}>
             Checkout
           </Button>
         </div>
