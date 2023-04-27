@@ -33,7 +33,7 @@ export function Frozen() {
         {items
           .filter((item) => item.subCategory === "Frozen food")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
@@ -49,7 +49,7 @@ export function Frozen() {
         {items
           .filter((item) => item.subCategory === "Dessert")
           .map((item) => (
-            <Col>
+            <Col key={item.name}>
               <StoreItem {...item} />
             </Col>
           ))}
