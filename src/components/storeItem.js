@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { useShoppingCart } from "../contexts/shoppingCartContext";
 
-export function StoreItem({ name, price, inStock, link }) {
+export function StoreItem({ model, price, available, link }) {
   const {
     cartQty,
     getItemQuantity,
@@ -10,7 +10,7 @@ export function StoreItem({ name, price, inStock, link }) {
     removeFromCart,
   } = useShoppingCart();
 
-  const qty = getItemQuantity(name);
+  const qty = getItemQuantity(model);
 
   return (
     <div className="cards">
@@ -23,7 +23,7 @@ export function StoreItem({ name, price, inStock, link }) {
         />
         <Card.Body className="d-flex flex-column">
           <Card.Title className="d-flex justify-content-between align-item-baseline mb-4">
-            <span className="fs-2">{name}</span>
+            <span className="fs-2">{model}</span>
             <span
               className="ms-2 text-muted"
               style={{ fontSize: "1.5rem", paddingTop: "0.5rem" }}
@@ -39,11 +39,11 @@ export function StoreItem({ name, price, inStock, link }) {
                 style={{
                   backgroundColor: "#61dafb",
                 }}
-                onClick={() => increaseItemQuantity(name)}
+                onClick={() => increaseItemQuantity(model)}
                 //disable if out of stock or reached cart capacity
-                disabled={!inStock || cartQty >= 100}
+                disabled={!available || cartQty >= 100}
               >
-                {inStock === true ? "+ Add to Cart" : "Out of Stock"}
+                {available === true ? "+ Add to Cart" : "Out of Stock"}
               </Button>
             ) : (
               <div
@@ -54,12 +54,12 @@ export function StoreItem({ name, price, inStock, link }) {
                   className="d-flex align-items-center justify-content-center"
                   style={{ gap: "0.5rem" }}
                 >
-                  <Button onClick={() => decreaseItemQuantity(name)}>-</Button>
+                  <Button onClick={() => decreaseItemQuantity(model)}>-</Button>
                   <div>
                     <span className="fs-4">{qty}</span> &nbsp;in cart
                   </div>
                   <Button
-                    onClick={() => increaseItemQuantity(name)}
+                    onClick={() => increaseItemQuantity(model)}
                     //Cannot purchase a single item more than 20 times
                     //Sum of a single item cannot exceed 100 dollars
                     //Cart cannot contain more than 100 items
@@ -75,7 +75,7 @@ export function StoreItem({ name, price, inStock, link }) {
                 <Button
                   variant="danger"
                   size="sm"
-                  onClick={() => removeFromCart(name)}
+                  onClick={() => removeFromCart(model)}
                 >
                   Remove from cart
                 </Button>
