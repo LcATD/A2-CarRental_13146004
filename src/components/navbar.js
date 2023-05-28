@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import logo from "../logo.png";
+import logo from "../logo.svg";
 import { useShoppingCart } from "../contexts/shoppingCartContext";
 import storeItems from "../data/groceryData.json";
 
@@ -21,7 +21,7 @@ export function Navbar() {
   return (
     <>
       <a href="/" className="logo">
-        <img src={logo} alt="logo" width="80" height="40" />™
+        <img src={logo} alt="logo" width="200" height="80" />
       </a>
       <nav className="navbar">
         <div className="dropdown">
@@ -173,13 +173,6 @@ export function Navbar() {
           </div>
         </div>
       </nav>
-      <form className="searchForm">
-        <input
-          type="text"
-          placeholder="Search products..."
-          style={{ width: "20rem", height: "2rem" }}
-        />
-      </form>
       <Button
         onClick={openCart}
         style={{
