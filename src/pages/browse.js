@@ -5,14 +5,7 @@ import { Col, Row } from "react-bootstrap";
 export function Browse() {
   return (
     <>
-      <h1 className="body">Grocery</h1>
-      <h3
-        className="body"
-        id="beverage"
-        style={{ marginTop: "-3rem", marginBottom: "2rem" }}
-      >
-        Beverage
-      </h3>
+      <h1 className="body"> </h1> {/* Head space because I'm too lazy */}
       <Row md={2} xs={1} lg={3}>
         {items
           .filter((item) => item.subCategory === "Beverage")
