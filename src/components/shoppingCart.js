@@ -1,7 +1,7 @@
 import { Offcanvas, Stack, Button } from "react-bootstrap";
 import { useShoppingCart } from "../contexts/shoppingCartContext";
 import { CartItem } from "../components/cartItem";
-import storeItems from "../data/groceryData.json";
+import storeItems from "../data/cars.json";
 
 export function ShoppingCart({ isOpen }) {
   const { closeCart, cartItems } = useShoppingCart();
@@ -38,10 +38,7 @@ export function ShoppingCart({ isOpen }) {
           className="d-flex justify-content-center position-absolute bottom-0 w-100 pb-3"
           style={{
             //Hide when cart is empty, or already on the checkout page
-            visibility:
-              totalPrice === 0 || window.location.pathname === "/checkout"
-                ? "hidden"
-                : "visible",
+            visibility: totalPrice === 0 ? "hidden" : "visible",
           }}
         >
           <Button variant="outline-success" size="md" onClick={handleClick}>

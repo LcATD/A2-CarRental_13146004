@@ -1,8 +1,8 @@
-import items from "../data/groceryData.json";
+import items from "../data/cars.json";
 import { StoreItem } from "../components/storeItem.js";
 import { Col, Row } from "react-bootstrap";
 
-export function Grocery() {
+export function Browse() {
   return (
     <>
       <h1 className="body">Grocery</h1>

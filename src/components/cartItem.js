@@ -1,6 +1,6 @@
 import { useShoppingCart } from "../contexts/shoppingCartContext";
 import { Button, Stack } from "react-bootstrap";
-import storeItems from "../data/groceryData.json";
+import storeItems from "../data/cars.json";
 
 export function CartItem({ name, qty }) {
   const { removeFromCart } = useShoppingCart();
