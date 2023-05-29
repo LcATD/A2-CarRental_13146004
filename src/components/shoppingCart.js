@@ -6,7 +6,7 @@ import storeItems from "../data/cars.json";
 export function ShoppingCart({ isOpen }) {
   const { closeCart, cartItems } = useShoppingCart();
   const totalPrice = cartItems.reduce((total, cartItem) => {
-    const item = storeItems.find((i) => i.name === cartItem.name);
+    const item = storeItems.find((i) => i.model === cartItem.model);
     return total + (item?.price || 0) * cartItem.qty;
   }, 0);
   const handleClick = () => {
@@ -24,7 +24,7 @@ export function ShoppingCart({ isOpen }) {
         >
           <Stack gap={3}>
             {cartItems.map((item) => (
-              <CartItem key={item.name} {...item} />
+              <CartItem key={item.model} {...item} />
             ))}
           </Stack>
         </div>

@@ -16,20 +16,20 @@ export function ShoppingCartProvider({ children }) {
   const openCart = () => setCartOpen(true);
   const closeCart = () => setCartOpen(false);
 
-  function getItemQuantity(name) {
+  function getItemQuantity(model) {
     //Render on the screen how many items are currently in the basket
-    return cartItems.find((item) => item.name === name)?.qty || 0;
+    return cartItems.find((item) => item.model === model)?.qty || 0;
   }
 
-  function increaseItemQuantity(name) {
+  function increaseItemQuantity(model) {
     //Add 1 item to basket
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.name === name) == null) {
-        return [...currItems, { name, qty: 1 }];
+      if (currItems.find((item) => item.model === model) == null) {
+        return [...currItems, { model, qty: 1 }];
       } else {
         return currItems.map((item) => {
           //check to make it logically impossible to get more than 20 items of the same type
-          if (item.name === name && item.qty < 20) {
+          if (item.model === model && item.qty < 20) {
             return { ...item, qty: item.qty + 1 };
           } else {
             return item;
@@ -40,14 +40,14 @@ export function ShoppingCartProvider({ children }) {
     return null;
   }
 
-  function decreaseItemQuantity(name) {
+  function decreaseItemQuantity(model) {
     //Remove 1 item from basket
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.name === name)?.qty === 1) {
-        return currItems.filter((item) => item.name !== name);
+      if (currItems.find((item) => item.model === model)?.qty === 1) {
+        return currItems.filter((item) => item.model !== model);
       } else {
         return currItems.map((item) => {
-          if (item.name === name) {
+          if (item.model === model) {
             return { ...item, qty: item.qty - 1 };
           } else {
             return item;
@@ -58,10 +58,10 @@ export function ShoppingCartProvider({ children }) {
     return null;
   }
 
-  function removeFromCart(name) {
+  function removeFromCart(model) {
     //Remove multiple items of the same type from basket
     setCartItems((currItems) => {
-      return currItems.filter((item) => item.name !== name);
+      return currItems.filter((item) => item.model !== model);
     });
   }
 

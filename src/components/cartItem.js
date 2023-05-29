@@ -2,9 +2,9 @@ import { useShoppingCart } from "../contexts/shoppingCartContext";
 import { Button, Stack } from "react-bootstrap";
 import storeItems from "../data/cars.json";
 
-export function CartItem({ name, qty }) {
+export function CartItem({ model, qty }) {
   const { removeFromCart } = useShoppingCart();
-  const item = storeItems.find((i) => i.name === name);
+  const item = storeItems.find((i) => i.model === model);
   if (item === null) return null;
   else
     return (
@@ -21,7 +21,7 @@ export function CartItem({ name, qty }) {
           />
           <div className="me-auto">
             <div>
-              {item.name}
+              {item.model}
               {qty > 1 && (
                 <span className="text-muted" style={{ fontSize: "0.8rem" }}>
                   &nbsp;x{qty}

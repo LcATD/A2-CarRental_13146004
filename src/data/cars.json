@@ -104,17 +104,17 @@
     "link": "/images/maplewater.jpg"
   },
   {
-    "brand": "Toyota",
-    "model": "Almond Water",
+    "brand": "Mitsubishi",
+    "model": "Hitomaru-Shiki",
     "price": 1000,
-    "category": "Sedan",
-    "modelYear": "2000",
-    "mileage": 5000,
-    "fuelType": "Petrol",
-    "seats": 4,
-    "desc": "description",
+    "category": "Main Battle Tank",
+    "modelYear": "2010",
+    "mileage": 6942,
+    "fuelType": "Diesel",
+    "seats": 3,
+    "desc": "Type 10 Main Battle Tank",
     "available": true,
-    "link": "/images/almondwater.jpg"
+    "link": "/images/hitomaru.jpg"
   },
   {
     "brand": "Toyota",

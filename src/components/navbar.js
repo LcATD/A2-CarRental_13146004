@@ -8,7 +8,7 @@ export function Navbar() {
   return (
     <>
       <a href="/browse" className="logo">
-        <img src={logo} alt="logo" width="200" height="80" />
+        <img src={logo} alt="logo" width="200" height="65" />
       </a>
       <nav className="navbar">
         <a className="dropdown" href="/browse">
