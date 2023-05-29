@@ -50,10 +50,10 @@ export function Checkout() {
       });
       //empty the cart
       cartItems.forEach((item) => {
-        removeFromCart(item.name);
+        removeFromCart(item.model);
       });
       //redirect to finish page, in this case it's missing so just redirect back to home
-      window.location.href = "/";
+      window.location.href = "/browse";
     } else {
       setFormErrors(errors);
     }

@@ -12,7 +12,7 @@ export function Navbar() {
       </a>
       <nav className="navbar">
         <a className="dropdown" href="/browse">
-          Welcome to UTS-Hertz. Rent the cars now!!!
+          Welcome to Hertz-UTS. Rent the cars now!!!
         </a>
       </nav>
       <Button
