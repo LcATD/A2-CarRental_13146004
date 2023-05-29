@@ -24,19 +24,19 @@ export function CartItem({ model, qty }) {
               {item.model}
               {qty > 1 && (
                 <span className="text-muted" style={{ fontSize: "0.8rem" }}>
-                  &nbsp;x{qty}
+                  &nbsp;{qty}d.
                 </span>
               )}
             </div>
             <div className="text-muted" style={{ fontSize: "0.8rem" }}>
-              ${item.price}
+              ${item.price}/day
             </div>
           </div>
           <div>${(item.price * qty).toFixed(2)}</div>
           <Button
             variant="danger"
             size="sm"
-            onClick={() => removeFromCart(item.name)}
+            onClick={() => removeFromCart(item.model)}
             style={{
               //disable editing on checkout page
               visibility:

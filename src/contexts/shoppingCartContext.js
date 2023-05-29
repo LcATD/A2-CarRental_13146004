@@ -12,7 +12,7 @@ export function useShoppingCart() {
 export function ShoppingCartProvider({ children }) {
   const [cartItems, setCartItems] = useLocalStorage("shopping-cart", []);
   const [cartOpen, setCartOpen] = useState(false);
-  const cartQty = cartItems.reduce((qty, item) => item.qty + qty, 0);
+  const cartQty = cartItems.length;
   const openCart = () => setCartOpen(true);
   const closeCart = () => setCartOpen(false);
 
@@ -28,8 +28,8 @@ export function ShoppingCartProvider({ children }) {
         return [...currItems, { model, qty: 1 }];
       } else {
         return currItems.map((item) => {
-          //check to make it logically impossible to get more than 20 items of the same type
-          if (item.model === model && item.qty < 20) {
+          //check to make it logically impossible to rent a car for more than 360 days
+          if (item.model === model && item.qty < 360) {
             return { ...item, qty: item.qty + 1 };
           } else {
             return item;

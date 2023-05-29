@@ -104,19 +104,6 @@
     "link": "/images/maplewater.jpg"
   },
   {
-    "brand": "Mitsubishi",
-    "model": "Hitomaru-Shiki",
-    "price": 1000,
-    "category": "Main Battle Tank",
-    "modelYear": "2010",
-    "mileage": 6942,
-    "fuelType": "Diesel",
-    "seats": 3,
-    "desc": "Type 10 Main Battle Tank",
-    "available": true,
-    "link": "/images/hitomaru.jpg"
-  },
-  {
     "brand": "Toyota",
     "model": "Olive Oil",
     "price": 800,
@@ -128,5 +115,18 @@
     "desc": "description",
     "available": false,
     "link": "/images/oliveoil.jpg"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Hitomaru-Shiki",
+    "price": 1000,
+    "category": "Main Battle Tank",
+    "modelYear": "2010",
+    "mileage": 6942,
+    "fuelType": "Diesel",
+    "seats": 3,
+    "desc": "Type 10 Main Battle Tank",
+    "available": true,
+    "link": "/images/hitomaru.jpg"
   }
 ]

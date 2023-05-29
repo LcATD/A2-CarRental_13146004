@@ -28,7 +28,7 @@ export function StoreItem({ model, price, available, link }) {
               className="ms-2 text-muted"
               style={{ fontSize: "1.5rem", paddingTop: "0.5rem" }}
             >
-              ${price.toFixed(2)}
+              ${price.toFixed(2)} / Day
             </span>
           </Card.Title>
           <div className="mt-auto">
@@ -41,7 +41,7 @@ export function StoreItem({ model, price, available, link }) {
                 }}
                 onClick={() => increaseItemQuantity(model)}
                 //disable if out of stock or reached cart capacity
-                disabled={!available || cartQty >= 100}
+                disabled={!available || cartQty >= 10}
               >
                 {available === true ? "+ Add to Cart" : "Out of Stock"}
               </Button>
@@ -56,15 +56,22 @@ export function StoreItem({ model, price, available, link }) {
                 >
                   <Button onClick={() => decreaseItemQuantity(model)}>-</Button>
                   <div>
-                    <span className="fs-4">{qty}</span> &nbsp;in cart
+                    <span className="fs-4">{qty}</span> &nbsp;Day
+                    <span
+                      style={{ visibility: qty > 1 ? "visible" : "hidden" }}
+                    >
+                      s
+                    </span>
                   </div>
                   <Button
                     onClick={() => increaseItemQuantity(model)}
-                    //Cannot purchase a single item more than 20 times
-                    //Sum of a single item cannot exceed 100 dollars
-                    //Cart cannot contain more than 100 items
+                    //Cannot rent a single car more than 360 days
+                    //Sum of rent for a single car cannot exceed 10000 dollars
+                    //Cart cannot contain more than 10 cars
                     disabled={
-                      qty >= 20 || (qty + 1) * price >= 100 || cartQty >= 100
+                      qty >= 360 ||
+                      (qty + 1) * price >= 10000.1 ||
+                      cartQty >= 10
                         ? true
                         : false
                     }
