@@ -43,7 +43,7 @@ export function StoreItem({ model, price, available, link }) {
                 //disable if out of stock or reached cart capacity
                 disabled={!available || cartQty >= 10}
               >
-                {available === true ? "+ Add to Cart" : "Out of Stock"}
+                {available === true ? "+ Add to Cart" : "Unavailable"}
               </Button>
             ) : (
               <div
