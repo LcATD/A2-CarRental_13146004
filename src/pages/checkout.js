@@ -63,7 +63,7 @@ export function Checkout() {
     const errors = {};
     if (!data.name) {
       errors.name = "Please enter your name.";
-    } else if (/^([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/.test(data.name)) {
+    } else if (/^([A-Z][-,a-z. ']+[ ]*)+/.test(data.name)) {
       errors.name = "Please enter a valid name.";
     }
     if (!data.address) {
