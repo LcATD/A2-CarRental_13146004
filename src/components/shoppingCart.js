@@ -38,7 +38,10 @@ export function ShoppingCart({ isOpen }) {
           className="d-flex justify-content-center position-absolute bottom-0 w-100 pb-3"
           style={{
             //Hide when cart is empty, or already on the checkout page
-            visibility: totalPrice === 0 ? "hidden" : "visible",
+            visibility:
+              totalPrice === 0 || window.location.href.includes("/checkout")
+                ? "hidden"
+                : "visible",
           }}
         >
           <Button variant="outline-success" size="md" onClick={handleClick}>

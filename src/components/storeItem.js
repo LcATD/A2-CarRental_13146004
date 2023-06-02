@@ -1,7 +1,19 @@
 import { Card, Button } from "react-bootstrap";
 import { useShoppingCart } from "../contexts/shoppingCartContext";
 
-export function StoreItem({ model, price, available, link }) {
+export function StoreItem({
+  model,
+  price,
+  available,
+  link,
+  mileage,
+  brand,
+  category,
+  modelYear,
+  fuelType,
+  seats,
+  desc,
+}) {
   const {
     cartQty,
     getItemQuantity,
@@ -31,6 +43,13 @@ export function StoreItem({ model, price, available, link }) {
               ${price.toFixed(2)} / Day
             </span>
           </Card.Title>
+          <div className="mt-auto">Brand: {brand}</div>
+          <div className="mt-auto">Category: {category}</div>
+          <div className="mt-auto">Mileage: {mileage}km</div>
+          <div className="mt-auto">Seats: {seats}</div>
+          <div className="mt-auto">Model Year: {modelYear}</div>
+          <div className="mt-auto">Fuel Type: {fuelType}</div>
+          <div className="mt-auto">Description: {desc}</div>
           <div className="mt-auto">
             {qty === 0 ? (
               <Button
