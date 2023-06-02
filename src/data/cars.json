@@ -2,13 +2,13 @@
   {
     "brand": "Toyota",
     "model": "Camry",
-    "price": 10000,
+    "price": 100,
     "category": "Sedan",
     "modelYear": "2013",
-    "mileage": 65536,
+    "mileage": 44041,
     "fuelType": "Petrol",
     "seats": 5,
-    "desc": "Not very Cheap!",
+    "desc": "Cheapo!",
     "available": true,
     "link": "/images/camry.jpg"
   },
